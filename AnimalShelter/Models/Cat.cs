@@ -6,8 +6,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AnimalShelter.Models
 {
-    public class Cat
-    {
+  public class Cat
+  {
     public int CatId { get; set; }
     [Required]
     public string Name { get; set; }
@@ -15,5 +15,5 @@ namespace AnimalShelter.Models
     public string Breed { get; set; }
     [Required]
     public string Gender { get; set; }
-    }
+  }
 }
