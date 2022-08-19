@@ -32,7 +32,7 @@ namespace AnimalShelter.Controllers
       _db.Dogs.Add(dog);
       await _db.SaveChangesAsync();
 
-      return CreatedAtAction("Post", new { id = dog.DogId }, dog);
+      return CreatedAtAction(nameof(GetDog), new { id = dog.DogId }, dog);
     }
 
     [HttpGet("{id}")]
