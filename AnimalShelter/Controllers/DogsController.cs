@@ -34,5 +34,18 @@ namespace AnimalShelter.Controllers
 
       return CreatedAtAction("Post", new { id = dog.DogId }, dog);
     }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Dog>> GetDog(int id)
+    {
+      var dog = await _db.Dogs.FindAsync(id);
+
+      if (dog == null)
+      {
+        return NotFound();
+      }
+
+      return dog;
+    }
   }
 }
