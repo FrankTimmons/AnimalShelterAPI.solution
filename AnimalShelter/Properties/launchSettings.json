@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "animalshelter": {
+    "AnimalShelter": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

@@ -11,8 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using AnimalShelter.Models;
 
-namespace animalshelter
+namespace AnimalShelter
 {
   public class Startup
   {
@@ -30,7 +31,7 @@ namespace animalshelter
       services.AddControllers();
       services.AddSwaggerGen(c =>
       {
-        c.SwaggerDoc("v1", new OpenApiInfo { Title = "animalshelter", Version = "v1" });
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = "AnimalShelter", Version = "v1" });
       });
     }
 
@@ -41,7 +42,7 @@ namespace animalshelter
       {
         app.UseDeveloperExceptionPage();
         app.UseSwagger();
-        app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "animalshelter v1"));
+        app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AnimalShelter v1"));
       }
 
       app.UseHttpsRedirection();
